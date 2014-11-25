@@ -11,11 +11,17 @@
     },
 
     "page_action": {
+        "default_icon": {
+            "19": "icon-19.png",
+            "38": "icon-38.png"
+        },
         "default_popup": "popup.html",
         "default_title": "Music Difficulty"
     },
 
     "permissions" : [
-        "declarativeContent"
+        "declarativeContent",
+        "tabs",
+        "https://music-api.herokuapps.com/"
     ]
 }
