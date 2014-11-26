@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var popoverHandler = function popoverHandler(event) {
+            if (event.target.identifier === "difficultyPopover") {
+                var url = safari.application.activeBrowserWindow.activeTab.url;
+                safari.extension.popovers[0].contentWindow.calculateDifficulty(url);
+            }
+        }
+        
+        var validateHandler = function validateHandler(event) {
+            if (event.target.identifier === "viewDifficulty") {
+                var url = safari.application.activeBrowserWindow.activeTab.url;
+                event.target.disabled = url.search(/musescore\.com\/.*\/scores/) === -1;
+            }
+        }
+        
+        safari.application.addEventListener("popover", popoverHandler, false);
+        safari.application.addEventListener("validate", validateHandler, true);
+    </script>
+    </head>
+    <body>
+    </body>
+</html>

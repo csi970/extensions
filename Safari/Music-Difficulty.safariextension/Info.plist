@@ -16,6 +16,8 @@
 	<string>1</string>
 	<key>Chrome</key>
 	<dict>
+		<key>Global Page</key>
+		<string>global.html</string>
 		<key>Popovers</key>
 		<array>
 			<dict>
@@ -32,6 +34,8 @@
 		<key>Toolbar Items</key>
 		<array>
 			<dict>
+				<key>Command</key>
+				<string></string>
 				<key>Identifier</key>
 				<string>viewDifficulty</string>
 				<key>Image</key>
@@ -62,14 +66,10 @@
 	<dict>
 		<key>Website Access</key>
 		<dict>
-			<key>Allowed Domains</key>
-			<array>
-				<string>*.musescore.com/</string>
-			</array>
 			<key>Include Secure Pages</key>
 			<true/>
 			<key>Level</key>
-			<string>Some</string>
+			<string>All</string>
 		</dict>
 	</dict>
 </dict>
