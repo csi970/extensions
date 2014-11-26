@@ -1,0 +1,13 @@
+{
+  "name": "music-difficulty",
+  "title": "Music Difficulty",
+  "id": "jid1-dkLpGha6riF0vQ",
+  "description": "Displays the difficulty of a score on the MuseScore.com website",
+  "author": "Andrew Trautmann",
+  "contributors": ["Ben Burwell"],
+  "license": "MPL 2.0",
+  "version": "0.0.1",
+  "permissions": {
+    "cross-domain-content": ["https://music-api.herokuapp.com"]
+  }
+}
