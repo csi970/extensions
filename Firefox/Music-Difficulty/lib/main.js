@@ -4,14 +4,18 @@ var data = require("sdk/self").data;
 var tabs = require("sdk/tabs");
 
 var button = ToggleButton({
-  id: "my-button",
-  label: "my button",
-  icon: "./icon-16.png",
+  id: "view-difficulty",
+  label: "View Difficulty",
+  icon: {
+    "16": "./icon-16.png",
+    "32": "./icon-32.png"
+  },
   onChange: handleChange
 });
 
 var panel = panels.Panel({
   contentURL: data.url("popup.html"),
+  contentScriptFile: data.url("popup.js"),
   onHide: handleHide
 });
 
