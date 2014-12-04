@@ -4,7 +4,6 @@ var addContent = function(o, e, i) {
 
     e.appendChild(newEl);
   
-    //TODO: get part name from API and display ("Part #") if none is provided
     var score = (o.difficulty * 100).toFixed(0);
     var score_class = 'easy';
     if (score > 50) {
@@ -28,6 +27,7 @@ var addContent = function(o, e, i) {
     newEl.querySelector('.numRests').innerText = o.numRests;
     newEl.querySelector('.keyChanges').innerText = o.keyChanges;
     newEl.querySelector('.timeChanges').innerText = o.timeChanges;
+    newEl.querySelector('.partName').innerText = o.partName || o.partId;
     var rangeString = o.range.minPitch + '-' + o.range.maxPitch;
     newEl.querySelector('.range').innerText = rangeString;
 };
