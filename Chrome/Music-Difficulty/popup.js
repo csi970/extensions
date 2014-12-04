@@ -6,6 +6,7 @@ var addContent = function(o, e, i) {
   
     //TODO: change class name for different difficulties
     //TODO: get part name from API and display ("Part #") if none is provided
+    var score = (o.difficulty * 100).toFixed(0);
     
     newEl.setAttribute('class', 'part easy');
     newEl.removeAttribute('id');
@@ -13,7 +14,7 @@ var addContent = function(o, e, i) {
     newEl.querySelector('.partName').setAttribute('for', 'part-'+i);
     newEl.querySelector('.partNameCheck').setAttribute('id', 'part-'+i);
     
-    newEl.querySelector('.score').innerText = o.difficulty.toFixed(3);
+    newEl.querySelector('.score').innerText = (o.difficulty * 100).toFixed(0);
     newEl.querySelector('.numNotes').innerText = o.numNotes;
     newEl.querySelector('.numChords').innerText = o.numChords;
     newEl.querySelector('.numAccidentals').innerText = o.numAccidentals;
