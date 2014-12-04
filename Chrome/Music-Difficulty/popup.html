@@ -2,15 +2,90 @@
 <html>
   <head>
     <title>Music Difficulty Extension Popup</title>
+    <meta charset="utf8">
     <style>
       body {
         min-width: 357px;
         overflow-x: hidden;
+        font-family: 'Open Sans';
       }
+
+      h1 {
+        color: #0e5a94;
+        font-size: 20px;
+        text-align: center;
+      }
+
       .part {
-        border: 1px solid #999;
-        margin: 4px;
-        padding: 4px;
+        margin: 6px;
+        padding: 1px;
+        color: #fff;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 200;
+      }
+
+      label {
+        font-weight: 200;
+        font-size: 16px;
+        margin: 0;
+        padding: 8px;
+        display: block;
+        cursor: pointer;
+      }
+
+      input[type=checkbox] {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      input[type=checkbox]:checked ~ div {
+        max-height: 500px;
+      }
+
+      th {
+        text-align: right;
+      }
+
+      .score {
+        float: right;
+        text-align: right;
+        font-size: 16px;
+        padding: 8px;
+      }
+
+      .easy {
+        background-color: #1B8F1D;
+      }
+
+      .medium {
+        background-color: #E5AD10;
+      }
+
+      .hard {
+        background-color: #CC2513;
+      }
+
+      .details {
+        border-radius: 0 0 6px 6px;
+        color: #000;
+        max-height: 0;
+        transition: all 0.3s;
+        overflow: hidden;
+      }
+
+      .easy .details {
+        background-color: #b4ffb6;
+      }
+
+      .medium .details {
+        background-color: #ffffc3;
+        
+      }
+
+      .hard .details {
+        background-color: #ffbead;
       }
     </style>
 
@@ -23,7 +98,134 @@
     <script src='popup.js'></script>
   </head>
   <body>
-    <h1 id="title"></h1>
-    <div id="part_container"></div>
+    <h1 id="title">Loading...</h1>
+    <div id="part_container">
+
+      <div class="easy part">
+        <div class="score">1.0</div>
+        <label for="part-0">Piano</label>
+        <input type="checkbox" id="part-0">
+        <div class="details">
+          <table>
+            <tr>
+              <th>Notes</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Chords</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Rests</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Accidentals</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Grace Notes</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Key Changes</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Time Signature Changes</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td>G2–A4</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="medium part">
+        <div class="score">3.5</div>
+        <label for="part-1">Cello</label>
+        <input type="checkbox" id="part-1">
+        <div class="details">
+          <table>
+            <tr>
+              <th>Notes</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Chords</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Rests</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Accidentals</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Grace Notes</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Key Changes</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Time Signature Changes</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td>G2–A4</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="hard part">
+        <div class="score">5.7</div>
+        <label for="part-2">Violin</label>
+        <input type="checkbox" id="part-2">
+        <div class="details">
+          <table>
+            <tr>
+              <th>Notes</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Chords</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Rests</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Accidentals</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Grace Notes</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Key Changes</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Time Signature Changes</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Range</th>
+              <td>G2–A4</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
