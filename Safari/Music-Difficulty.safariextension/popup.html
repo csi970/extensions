@@ -134,6 +134,12 @@
         };
 
         function calculateDifficulty(tabUrl) {
+            var partContainer = document.getElementById('part_container');
+            var subPartElements = Array.prototype.slice.call(partContainer.querySelectorAll('.part'));
+            subPartElements.forEach(function (el) {
+                partContainer.removeChild(el);
+            });
+            
             var xhr = new XMLHttpRequest(),
                 encodedUrl = encodeURIComponent(tabUrl);
             xhr.open('GET', 'https://music-api.herokuapp.com/api/get_difficulty_for_musescore_url?url=' + encodedUrl, true);
@@ -144,9 +150,6 @@
                     document.getElementById('title').innerText = score.title;
 
                     score.parts.map(addPart);
-                    
-                    var pro = document.getElementById('prototype');
-                    document.getElementById('part_container').removeChild(pro);
                 }
             };
             xhr.send();
