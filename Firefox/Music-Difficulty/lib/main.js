@@ -16,6 +16,8 @@ var button = ToggleButton({
 var panel = panels.Panel({
   contentURL: data.url("popup.html"),
   contentScriptFile: data.url("popup.js"),
+  width: 400,
+  height: 300,
   onHide: handleHide
 });
 
