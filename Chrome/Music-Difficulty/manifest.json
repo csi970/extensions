@@ -22,6 +22,6 @@
     "permissions" : [
         "declarativeContent",
         "tabs",
-        "https://music-api.herokuapps.com/"
+        "https://music-api.herokuapp.com/"
     ]
 }
